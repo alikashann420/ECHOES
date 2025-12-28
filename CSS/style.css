@@ -1,0 +1,341 @@
+/* ================= GLOBAL RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0e0e0e, #161616);
+    color: #f2f2f2;
+    transition: background 0.5s ease, color 0.5s ease;
+    overflow-x: hidden;
+}
+
+/* ================= HEADER ================= */
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background: rgba(20, 20, 20, 0.9);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+h1 {
+    font-size: 3.2rem;
+    background: linear-gradient(90deg, #f5c518, #ff9f1c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    letter-spacing: 2px;
+}
+
+header p {
+    margin-top: 10px;
+    color: #ccc;
+    font-size: 1.1rem;
+}
+
+/* ================= NAVIGATION ================= */
+nav {
+    margin-top: 20px;
+}
+
+nav button {
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 10px 18px;
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 5px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+nav button:hover {
+    background: #f5c518;
+    color: #000;
+    transform: translateY(-3px);
+}
+
+/* ================= SECTIONS ================= */
+.section {
+    display: none;
+    padding: 60px 20px;
+    text-align: center;
+    animation: fadeIn 0.6s ease;
+}
+
+.section.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(25px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ================= INTRO TEXT ================= */
+.intro {
+    max-width: 820px;
+    margin: auto;
+    font-size: 1.2rem;
+    line-height: 1.9;
+    color: #e6e6e6;
+}
+
+.intro span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeWord 0.6s forwards;
+    white-space: pre;
+}
+
+@keyframes fadeWord {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ================= POEM CARDS ================= */
+.poem {
+    max-width: 820px;
+    margin: 30px auto;
+    padding: 28px;
+    background: rgba(255,255,255,0.08);
+    border-left: 5px solid #f5c518;
+    border-radius: 14px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+    transition: all 0.35s ease;
+    white-space: pre-wrap;
+    color: #f2f2f2; /* dark mode text */
+}
+
+.poem:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.7);
+}
+
+.urdu {
+    font-family: 'Noto Nastaliq Urdu', serif;
+    font-size: 1.6rem;
+    line-height: 2.3;
+    direction: rtl;
+    color: #f2f2f2; /* dark mode Urdu text */
+}
+
+/* ================= ADD POETRY BOX ================= */
+.add-poetry {
+    max-width: 720px;
+    margin: 50px auto;
+    padding: 25px;
+    background: rgba(255,255,255,0.07);
+    border-radius: 16px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+}
+
+.add-poetry textarea,
+.add-poetry input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: none;
+    background: rgba(0,0,0,0.4);
+    color: #fff;
+}
+
+.add-poetry button {
+    margin-top: 15px;
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #f5c518, #ff9f1c);
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.add-poetry button:hover {
+    transform: scale(1.08);
+}
+
+/* ================= VIDEO ================= */
+.video-player {
+    width: 85%;
+    max-width: 750px;
+    border-radius: 16px;
+    margin: 30px auto;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.6);
+}
+
+/* ================= LIGHT MODE ================= */
+.light {
+    background: linear-gradient(135deg, #f6f8fb, #e9ecf1);
+    color: #111;
+}
+
+.light header {
+    background: rgba(255,255,255,0.9);
+}
+
+.light .poem {
+    background: #ffffff;
+    color: #111; /* readable text in light mode */
+}
+
+.light .urdu {
+    color: #111;
+}
+
+.light .add-poetry {
+    background: #ffffff;
+    color: #111;
+}
+
+.light .intro {
+    color: #333;
+}
+
+.light nav button {
+    background: #ac9c9ced;
+    color: #111;
+}
+
+.light nav button:hover {
+    background: linear-gradient(135deg, #ffd86a, #ffb347);
+    color: #000;
+}
+
+/* ================= SEARCH BOX ================= */
+.search-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin: 40px auto;
+    max-width: 520px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 40px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 35px rgba(0,0,0,0.4);
+    transition: all 0.3s ease;
+}
+
+.search-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 45px rgba(0,0,0,0.5);
+}
+
+.search-box input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 14px 18px;
+    font-size: 1rem;
+    border-radius: 30px;
+    background: rgba(0,0,0,0.35);
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.search-box input::placeholder {
+    color: rgba(255,255,255,0.6);
+}
+
+.search-box input:focus {
+    background: rgba(0,0,0,0.55);
+}
+
+.search-box button {
+    padding: 14px 22px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #f5c518, #ff9f1c);
+    border: none;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+    white-space: nowrap;
+}
+
+.search-box button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+}
+
+/* LIGHT MODE SUPPORT FOR SEARCH */
+.light .search-box {
+    background: rgba(255, 255, 255, 0.85);
+}
+
+.light .search-box input {
+    background: #ffffff;
+    color: #111;
+}
+
+.light .search-box input::placeholder {
+    color: #555;
+}
+
+.light .search-box button {
+    background: linear-gradient(135deg, #ffd86a, #ffb347);
+    color: #000;
+}
+@keyframes fadeInPoem {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* ================= FOOTER ================= */
+footer {
+    text-align: center;
+    padding: 25px 20px;
+    background: rgba(20, 20, 20, 0.9); /* matches header style */
+    backdrop-filter: blur(12px);
+    box-shadow: 0 -5px 20px rgba(0,0,0,0.5);
+    color: #ccc;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    position: relative;
+    z-index: 10;
+    transition: background 0.5s ease, color 0.5s ease;
+}
+
+footer:hover {
+    color: #f5c518; /* subtle hover glow */
+}
+
+footer a {
+    color: #f5c518;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ff9f1c;
+}
+
+/* Light mode footer */
+.light footer {
+    background: rgba(255,255,255,0.9);
+    color: #111;
+}
+
+.light footer:hover {
+    color: #ffb347;
+}
+footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 2px;
+    background: linear-gradient(90deg, #f5c518, #ff9f1c);
+    border-radius: 1px;
+}
