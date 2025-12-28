@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Echoes | Poetry & Music</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Echoes</h1>
+    <p>Where Poetry Meets Music</p>
+
+    <nav>
+        <button onclick="showSection('home')">Home</button>
+        <button onclick="showSection('poetry')">Poetry</button>
+        <button onclick="showSection('music')">Music</button>
+        <button onclick="toggleTheme()">🌙</button>
+    </nav>
+</header>
+
+<!-- HOME -->
+<section id="home" class="section active">
+    <h2>Welcome to Echoes</h2>
+    <p class="intro">
+Echoes is a digital sanctuary where emotions turn into words and melodies.It is a place  for poetry lovers to explore timeless verses, discover new voices,and immerse themselves in the beauty of language. Music enthusiasts can listen to soulful tunes, feel the 
+ rhythm, and connect with melodies that touch the heart. Whether you want to search for your favorite poetry, listen to music, or share your own creative verses, Echoes brings it all together in one harmonious space. Express yourself, discover new art, and let your soul resonate with words and music.
+    </p>
+
+    <!-- Add Your Own Poetry -->
+    <div class="add-poetry">
+        <h3>Share Your Poetry</h3>
+        <textarea id="userPoem" placeholder="Write your poetry here..." rows="4"></textarea><br>
+        <input type="text" id="userPoet" placeholder="Your name or pen name"><br>
+        <button onclick="addPoetry()">Add Poetry</button>
+    </div>
+
+    <!-- Display User Poetry -->
+    <div id="poemContainer">
+        <div class="poem urdu">
+            دل ناامید تو نہیں، ناکام ہی تو ہے<br>
+            لمبی ہے غم کی شام، مگر شام ہی تو ہے<br>
+            <span>— فیض احمد فیض</span>
+        </div>
+        <div class="poem urdu">
+            ہزاروں خواہشیں ایسی کہ ہر خواہش پہ دم نکلے<br>
+            بہت نکلے میرے ارمان لیکن پھر بھی کم نکلے<br>
+            <span>— مرزا غالب</span>
+        </div>
+        <!-- Added two romantic poems by Parveen Shakir -->
+        <div class="poem urdu">
+            وہ کہیں بھی گیا لوٹا تو مرے پاس آیا<br>
+            بس یہی بات ہے اچھی مرے ہرجائی کی<br>
+            <span>— پروین شاکر</span>
+        </div>
+        <div class="poem urdu">
+            کچھ تو ہوا ہوگا جو دل چاہا ہے تمہیں<br>
+            اور کچھ ہوا ہوگا جو خوابوں میں آیا ہے تمہیں<br>
+            <span>— پروین شاکر</span>
+        </div>
+    </div>
+</section>
+
+<!-- POETRY -->
+<section id="poetry" class="section">
+    <h2>📜 Poetry Collection</h2>
+
+    <!-- Search Rekhta -->
+    <div class="search-box">
+        <input type="text" id="rekhtaSearch" placeholder="Search poetry or poet...">
+        <button onclick="searchRekhta()">Search on Rekhta</button>
+    </div>
+
+    <div id="poetryList">
+        <div class="poem urdu">
+            دل ناامید تو نہیں، ناکام ہی تو ہے<br>
+            لمبی ہے غم کی شام، مگر شام ہی تو ہے<br>
+            <span>— فیض احمد فیض</span>
+        </div>
+        <div class="poem urdu">
+            ہزاروں خواہشیں ایسی کہ ہر خواہش پہ دم نکلے<br>
+            بہت نکلے میرے ارمان لیکن پھر بھی کم نکلے<br>
+            <span>— مرزا غالب</span>
+        </div>
+        <!-- Added two romantic poems by Parveen Shakir -->
+        <div class="poem urdu">
+            وہ کہیں بھی گیا لوٹا تو مرے پاس آیا<br>
+            بس یہی بات ہے اچھی مرے ہرجائی کی<br>
+            <span>— پروین شاکر</span>
+        </div>
+        <div class="poem urdu">
+            کچھ تو ہوا ہوگا جو دل چاہا ہے تمہیں<br>
+            اور کچھ ہوا ہوگا جو خوابوں میں آیا ہے تمہیں<br>
+            <span>— پروین شاکر</span>
+        </div>
+    </div>
+</section>
+
+<!-- MUSIC -->
+<section id="music" class="section">
+    <h2>🎵 Music</h2>
+
+    <video class="video-player" controls>
+        <source src="C:\Users\DELL-LAPTOP\Desktop\echoes\media\song1.mp4" type="video/mp4"> 
+    </video>
+
+    <div class="search-box">
+        <input type="text" id="musicSearch" placeholder="Search song on YouTube">
+        <button onclick="searchYouTube()">Search</button>
+    </div>
+</section>
+ 
+
+<footer>
+    <p>© 2025 Echoes — Created by Ali Kashan</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
